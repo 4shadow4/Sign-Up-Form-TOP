@@ -16,6 +16,74 @@
     font-display: swap;
 }
 
-:root{
+*{
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
     font-family: "Apple Garamond",Arial, Helvetica, sans-serif;
+
+}
+
+body {
+    display: flex;
+
+    margin: 0 auto;
+    height: 100%;
+}
+
+h1{
+    font-family: "Bebas Neue";
+    color: whitesmoke;
+    font-size: 10rem;
+    width: auto;
+    height: auto;
+}
+
+.main{
+    height: 100%;
+    width: 60%;
+
+    padding: 10px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+
+    font-size: 5rem;
+}
+
+.image-container{
+    position: relative;
+    width: 40%;
+    max-height: 99%;
+}
+.image-container::after{
+    content: "Foto von Halie West auf Unsplash";
+    position: absolute;
+    color: antiquewhite;   
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.image-container > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 20%;
+    width: 100%;
+    height: 20%;
+
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.image-container > div > img{
+    height: 100%;
+    width: auto;
 }
