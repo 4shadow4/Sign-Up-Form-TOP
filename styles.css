@@ -16,6 +16,15 @@
     font-display: swap;
 }
 
+:root{
+    --screenDimensionHeight: 100vh;
+    --screemDimensionWidth: 100vw;
+
+    --bg-color: whitesmoke; 
+
+    --font-size-Root: 8px;
+}
+
 *{
     margin: 0px;
     padding: 0px;
@@ -24,36 +33,25 @@
 
 html {
     font-family: "Apple Garamond",Arial, Helvetica, sans-serif;
-    height: 100%;
-    width: 100%;
+    font-size: var(--font-size-Root);
+    height: var(--screenDimensionHeight);
+    width: var(--screemDimensionWidth);
 
 }
 
 body {
     display: flex;
-
-    margin: 0 auto;
     width: 100%;
     height: 100%;
 }
 
-h1{
-    font-family: "Bebas Neue";
-    color: whitesmoke;
-    font-size: 40rem;
-    width: auto;
-    height: auto;
-}
-
 form{
-
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;   
 }
 
 form p{
-    padding: 0 0 100px 250px;
     width: 48%;
 
     display: flex;
@@ -62,18 +60,18 @@ form p{
 }
 
 input {
-    width: 80%;
-    height: 140px;
-    font-size: 1em;
+    width: 70%;
+    height: 1%;
+    font-size: clamp(0.1rem, 1vw, 4rem);
 
-    padding: 4px 16px;
+    padding: 3% 2%;
 
-    border-radius: 20px;
-    border: 2px solid rgb(219, 219, 219);
+    border-radius: 8px;
+    border: 0.2rem solid rgb(219, 219, 219);
 }
 
 label {
-    font-size: 0.9em;
+    font-size: clamp(0.5rem, 1vw, 24rem);
     color: rgb(48, 48, 48);
 }
 
@@ -89,25 +87,20 @@ input:focus{
 
 }
 
-h2{
-    margin-left: 250px;
-}
 
 button{
     font-family: "Apple Garamond",Arial, Helvetica, sans-serif;
-    
-    margin: 125px 0  0 250px;
 
     color: white;
     background-color: #596D48;
-    border-radius: 32px;
-    box-shadow: 0 0 40px rgba(0,0,0,0.2);
-
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
     border: none;
 
-    height: 175px;
-    width: 900px;
-    font-size: 1.3em;
+    height: 25%;
+    width: 30%;
+    margin-bottom: 1%;
+    font-size: clamp(0.5rem, 1.5vw, 3rem);
 }
 
 button:hover{
@@ -122,6 +115,10 @@ span{
     color: #596D48;
 }
 
+h2{
+    font-size: clamp(0.01rem, 2vw, 24rem);
+}
+
 .main{
     height: 100%;
     width: 60%;
@@ -133,54 +130,57 @@ span{
 
     font-size: 5rem;
 
-    background-color: ghostwhite;
+    background-color: var(--bg-color);
+    overflow: hidden;
 }
 
 .container01{
-    font-size: 1.5em;
-    padding: 1.5em;
-    padding-left: 250px;
-}
-.container01,
-.container02,
-.container03{
-    height: auto;
+    font-size: clamp(0.5rem, 1.5vw, 6rem);
+    padding: 0 0 2.5% 5%;
+    
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 .container02{
     background-color: white;
-    padding: 64px 0;
-    height: 1250px;
+    padding: 2.5% 5%;
+    height: 30%;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 60px;
+    gap: 3%;
 
     box-shadow: 4px 12px 30px rgba(0,0,0,0.2);
 }
 
 .container01,
 .container03{
-    height: 1000px;
+    height: 25%;
 }
 
-.container03 p{
-    margin: 40px 0 0 250px;
+.container03{
+    padding: 2.5% 0 0 5%;
+    font-size: clamp(0.2rem, 1vw, 2rem);
 }
 
 .image-container{
+    overflow: hidden;
     position: relative;
     width: 40%;
     height: 100%;
     
-    max-height: 99%;
 }
 .image-container::after{
     content: "Foto von Halie West auf Unsplash";
     position: absolute;
-    color: antiquewhite;   
-    bottom: 5px;
+    color: antiquewhite;
+    font-size: clamp(0.1rem, 1vw, 8rem);
+    
+    bottom: 2%;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -189,6 +189,10 @@ span{
     display: flex;
     justify-content: center;
     align-items: center;
+
+    font-size: clamp(0.5rem, 4vw, 40rem);
+    font-family: "Bebas Neue";
+    color: whitesmoke;
 
     position: absolute;
     top: 20%;
@@ -200,6 +204,7 @@ span{
 .image-container > img{
     height: 100%;
     width: 100%;
+    object-fit: cover;
 }
 
 .image-container > div > img{
