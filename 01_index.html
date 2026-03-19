@@ -17,21 +17,49 @@
     
     <div class="main">
 
-        <div>
-            <p>This is not a real online service! You know you need something <br>
-                like this in your life to help you realize your deepest dreams. <br>
-                Sign up <i>now</i> to get started.
-                <br><br>
-                You <i>know</i> you want to.
-            </p>
+        <div class="container01">
+            <p><b>
+                This is not a real online service! You know you need something <br>
+                    like this in your life to help you realize your deepest dreams. <br>
+                    Sign up <i>now</i> to get started.
+                    <br><br>
+                    You <i>know</i> you want to.
+            </b></p>
         </div>
-        <div>
-            <form action="" method="post">
-
+        <div class="container02">
+            <h2><b>Let's do this!</b></h2>
+            <form action="" method="post" id="SignIn">
+                
+                <p>
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </p>
+                <p>
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </p>
+                <p>
+                    <label for="email">E-Mail</label>
+                    <input type="email" id="email" name="email" required>
+                </p>
+                <p>
+                    <label for="phoneNumber">Phone Number</label>
+                    <input type="text" id="phoneNumber" name="phoneNumber" pattern="d \d{3} \d{3}" placeholder="X XXX XXX" required>
+                </p>
+                <p>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </p>
+                <p>
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                </p>
+                
             </form>
         </div>
-        <div>
-
+        <div class="container03">
+            <button form="SignIn" type="submit">Create Account</button>
+            <p>Already have an account? <span>Log in</span></p>
         </div>
 
     </div>
